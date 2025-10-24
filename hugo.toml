@@ -1,11 +1,11 @@
-baseurl = "https://example.com"
+baseurl = "https://aaryab.in"
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
 googleAnalytics = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 languageCode = "en-us"
 theme = "hugo-classic"
-title = "Classic"
+title = "home"
 publishDir = "docs"
 
 [markup.goldmark.renderer]
