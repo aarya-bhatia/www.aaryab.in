@@ -6,7 +6,6 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 languageCode = "en-us"
 theme = "hugo-classic"
 title = "home"
-publishDir = "docs"
 
 [markup.goldmark.renderer]
 unsafe = true
