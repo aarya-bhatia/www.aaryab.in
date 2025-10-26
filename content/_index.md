@@ -7,7 +7,7 @@ description: "The personal writings and expressions of Grayfox, otherwise known 
   src="/images/grayf0x.jpg"
   alt="A foxy face"> -->
 
-# Aarya Bhata
+# Aarya Bhatia
 
 Software Engineer and Musician
 
@@ -38,7 +38,7 @@ Software Engineer and Musician
 #### Software Development Engineer, PrivateLink - AWS
 July 2025 – Present
 - Update infrastructure in CDK to include Hydra approval workflow for security compliance tests
-- Optimize throughput by batching API calls between AWS regions causing large spikes in processing queue 
+- Optimize throughput by batching internal API calls between AWS regions causing large spikes in processing queue 
 - Execute and improve backfill scripts to migrate VPC endpoints to new metering workflow
 - Assisted in migration to new metering system dependency to address scaling concerns and simplify team infrastructure.
 - Ran scale up operations for cron job system for customer billing operations to address over and under billing issues.
