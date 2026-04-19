@@ -146,7 +146,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tui-suite">TUI Suite</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Systems</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -165,7 +166,7 @@
           </p>
           <p class="text-muted mb-4" style="max-width: 600px;">
             Specializing in building scalable cloud services and high-performance distributed systems. 
-            Passionate about backend engineering, automation, and occasionally, creating music.
+            Passionate about backend engineering, automation, and building a cohesive Terminal Mini-OS ecosystem.
           </p>
           <div class="d-flex gap-3 justify-content-center justify-content-md-start">
             <a href="mailto:aarya.bhatia1678@gmail.com" class="btn btn-primary px-4 py-2 rounded-pill">Get in touch</a>
@@ -221,36 +222,95 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="mb-5 py-4">
-      <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
-      <div class="d-flex flex-wrap" data-aos="fade-up">
-        <span class="badge badge-skill">Java</span>
-        <span class="badge badge-skill">C/C++</span>
-        <span class="badge badge-skill">Python</span>
-        <span class="badge badge-skill">Go</span>
-        <span class="badge badge-skill">Ruby on Rails</span>
-        <span class="badge badge-skill">JavaScript (React/Node)</span>
-        <span class="badge badge-skill">AWS (CDK, Flink, Kinesis)</span>
-        <span class="badge badge-skill">Docker</span>
-        <span class="badge badge-skill">SQL</span>
-        <span class="badge badge-skill">Linux</span>
-        <span class="badge badge-skill">Git</span>
+    <!-- TUI Mini-OS Suite Section -->
+    <section id="tui-suite" class="mb-5">
+      <div class="d-flex align-items-center justify-content-between mb-4" data-aos="fade-up">
+        <h2 class="section-title mb-0">The Terminal Ecosystem</h2>
+        <span class="badge bg-dark rounded-pill px-3">Vision: Mini-OS TUI</span>
+      </div>
+      <p class="text-muted mb-4" data-aos="fade-up">
+        A collection of lightweight, high-performance terminal utilities built in C++ using <code>ncurses</code>, designed to function as a cohesive, keyboard-driven mini-operating system.
+      </p>
+
+      <div class="row g-4">
+        <!-- Editor -->
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="card h-100 border-0 bg-dark text-light p-4 shadow">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h3 class="h5 font-monospace text-primary mb-0">$ ncurses-editor</h3>
+              <a href="https://github.com/aarya-bhatia/ncurses-editor" class="text-light" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="small text-secondary mb-3">A Vim-inspired modal text editor featuring tiling windows, lazy rendering, and binary tree layout management.</p>
+            <div class="mt-auto">
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">C++</span>
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">ncurses</span>
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">Catch2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- File Explorer -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 bg-dark text-light p-4 shadow">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h3 class="h5 font-monospace text-primary mb-0">$ file-explorer-tui</h3>
+              <a href="https://github.com/aarya-bhatia/file-explorer-tui" class="text-light" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="small text-secondary mb-3">A keyboard-centric file manager for rapid filesystem navigation, built with the POSIX API in C++.</p>
+            <div class="mt-auto">
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">C++</span>
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">POSIX</span>
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">Makefile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calendar -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 bg-dark text-light p-4 shadow">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h3 class="h5 font-monospace text-primary mb-0">$ calendar-tui</h3>
+              <a href="https://github.com/aarya-bhatia/calendar-tui" class="text-light" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="small text-secondary mb-3">Event management system with persistent storage and notification integration via libcurl and ncurses UI.</p>
+            <div class="mt-auto">
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">C++</span>
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">libcurl</span>
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">View-Model</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Maze -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 bg-dark text-light p-4 shadow">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h3 class="h5 font-monospace text-primary mb-0">$ terminal-maze</h3>
+              <a href="https://github.com/aarya-bhatia/terminal-maze" class="text-light" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="small text-secondary mb-3">Procedural maze generator and game featuring Vim-style navigation and custom microservice protocols.</p>
+            <div class="mt-auto">
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">C++</span>
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">ncurses</span>
+              <span class="badge bg-secondary" style="font-size: 0.7rem;">Algorithms</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Other Distributed Systems Projects -->
     <section id="projects" class="mb-5">
-      <h2 class="section-title" data-aos="fade-up">Selected Projects</h2>
+      <h2 class="section-title" data-aos="fade-up">Systems & Infrastructure</h2>
       <div class="row">
         <div class="col-md-6 mb-4" data-aos="fade-up">
-          <div class="card h-100 p-4">
+          <div class="card h-100 p-4 border-0 shadow-sm">
             <h3 class="h5">The Fine Print</h3>
             <p class="text-muted small">Led the backend team for a legal document summarization tool using GPT-3.5-Turbo. Built as a browser extension and web app to handle large-scale text efficiently.</p>
           </div>
         </div>
         <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card h-100 p-4">
+          <div class="card h-100 p-4 border-0 shadow-sm">
             <h3 class="h5">Maple Juice</h3>
             <p class="text-muted small">A distributed system in Go featuring a gossip-based failure detector, fault-tolerant file system, and an RPC-based batch processing framework.</p>
           </div>
