@@ -34,6 +34,15 @@
     <h3 class="h5">Software Development Engineer, PrivateLink - AWS</h3>
     <p>July 2025 – Present</p>
     <ul>
+      <li>Contributed multiple high impact fixes for sev2 reduction goal</li>
+      <ul>
+        <li>Proposed new logic to optimize async workflows to reduce dynamodb pressure</li>
+        <li>Perform upgrade on managed flink service application</li>
+        <li>Improved flink application to share cloudwatch clients in subtasks and reduce thread utilization and cpu by 10% in large regions.</li>
+        <li>Adapted core API for service creation to use workflows which persist rollback state and eliminate orphaned service/load balancer problems, a frequent custom issue.</li>
+      </ul>
+      <li>Region build automation for legacy LPT infrastructure including looking up custom properties from RIP and eliminate hard-coded variables such as aws accountID from code.</li>
+      <li>Oncall operator during large-scale events where multiple AZs went out and carefully collaborated on using BigRedButton tool to re-route traffic to different AZs to mitigate the issue.</li>
       <li>Extended kinesis flink pipeline with custom validation logic to prevent data loss after restarts.</li>
       <li>Update infrastructure in CDK to include Hydra approval workflow for security compliance tests</li>
       <li>Optimize throughput by batching internal API calls between AWS regions causing large spikes in processing
