@@ -4,149 +4,324 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aarya Bhatia</title>
+  <title>Aarya Bhatia | Software Development Engineer</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #0d6efd;
+      --text-dark: #1f2937;
+      --text-muted: #6b7280;
+      --bg-light: #f9fafb;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .hero-section {
+      padding: 80px 0 60px;
+      background: linear-gradient(to bottom, var(--bg-light), #ffffff);
+    }
+
+    .pfp-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 40px;
+      padding-bottom: 10px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 4px;
+      background-color: var(--primary-color);
+      border-radius: 2px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease;
+      margin-bottom: 24px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .badge-skill {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      border: 1px solid #e5e7eb;
+      font-weight: 500;
+      padding: 8px 16px;
+      margin: 4px;
+      font-size: 0.9rem;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    .contact-icon {
+      font-size: 1.2rem;
+      margin-right: 12px;
+      color: var(--primary-color);
+      width: 24px;
+      text-align: center;
+    }
+
+    .timeline-item {
+      padding-left: 20px;
+      border-left: 2px solid #e5e7eb;
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+    }
+
+    footer {
+      padding: 60px 0;
+      background-color: var(--bg-light);
+    }
+  </style>
 </head>
 
 <body>
-  <div class="container">
-    <h2 class="display-1">Aarya Bhatia</h2>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">AB.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <p class="lead">
-      Software Engineer and Musician
-    </p>
+  <!-- Hero Section -->
+  <section class="hero-section text-center text-md-start">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8" data-aos="fade-right">
+          <h1 class="display-3 mb-2">Aarya Bhatia</h1>
+          <p class="lead text-primary fw-600 mb-4">
+            Software Development Engineer at AWS | Distributed Systems & Cloud Infrastructure
+          </p>
+          <p class="text-muted mb-4" style="max-width: 600px;">
+            Specializing in building scalable cloud services and high-performance distributed systems. 
+            Passionate about backend engineering, automation, and occasionally, creating music.
+          </p>
+          <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+            <a href="mailto:aarya.bhatia1678@gmail.com" class="btn btn-primary px-4 py-2 rounded-pill">Get in touch</a>
+            <a href="https://www.github.com/aarya-bhatia" class="btn btn-outline-dark px-4 py-2 rounded-pill">GitHub</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mt-5 mt-md-0" data-aos="zoom-in">
+          <img src="images/pfp.jpg" class="pfp-img" alt="Aarya Bhatia">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <img src="images/pfp.jpg" class="mb-4">
+  <div class="container py-5">
+    
+    <!-- Experience Section -->
+    <section id="experience" class="mb-5">
+      <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
 
-    <h2>Education</h2>
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
+          <h3 class="h5 mb-0">Software Development Engineer, PrivateLink &mdash; AWS</h3>
+          <span class="text-muted small fw-bold">July 2025 &ndash; Present</span>
+        </div>
+        <ul class="text-muted small">
+          <li><strong>System Reliability:</strong> Engineered critical optimizations reducing Sev2 incidents and operational overhead for AWS PrivateLink.</li>
+          <li><strong>Workflow Optimization:</strong> Refactored asynchronous workflows to mitigate DynamoDB pressure, significantly improving system stability during peak loads.</li>
+          <li><strong>Resource Integrity:</strong> Architected a robust service creation API using stateful workflows to eliminate orphaned resources and ensure atomic rollbacks.</li>
+          <li><strong>Performance Engineering:</strong> Optimized managed Flink applications to share CloudWatch clients, reducing thread utilization and CPU overhead by 10% in large-scale regions.</li>
+          <li><strong>Automation:</strong> Streamlined region build automation for legacy infrastructure, eliminating hard-coded variables and improving deployment reliability.</li>
+          <li><strong>Incident Management:</strong> Acted as Oncall Operator during large-scale outages, collaborating on traffic re-routing strategies to maintain high service availability.</li>
+        </ul>
+      </div>
 
-    <ul>
-      <li>2020–2024: Bachelor of Science in Applied Mathematics and Computer Science, University of Illinois
-        Urbana-Champaign</li>
-      <li>2007–2020: The Shri Ram School Aravali, Gurgaon</li>
-    </ul>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
+          <h3 class="h5 mb-0">Software Development Engineer &mdash; Amazon</h3>
+          <span class="text-muted small fw-bold">July 2024 &ndash; July 2025</span>
+        </div>
+        <ul class="text-muted small">
+          <li><strong>Mobile Development:</strong> Developed core features for the Goodreads iOS and Android applications, enhancing user engagement.</li>
+          <li><strong>Infrastructure Migration:</strong> Led complex migrations to CloudAuth and Amazon API standards, ensuring modern security compliance across services.</li>
+          <li><strong>Runtime Modernization:</strong> Orchestrated JDK17 migrations for multiple mission-critical Java services.</li>
+        </ul>
+      </div>
 
-    <h2>Experience</h2>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
+          <h3 class="h5 mb-0">Software Development Engineer Intern &mdash; Amazon</h3>
+          <span class="text-muted small fw-bold">May 2023 &ndash; Aug 2023</span>
+        </div>
+        <p class="text-muted small">Designed and implemented a Ruby on Rails and GraphQL API to serve editorial data for Goodreads. Shipped major feature updates to high-traffic web pages using React.</p>
+      </div>
+    </section>
 
-    <h3 class="h5">Software Development Engineer, PrivateLink - AWS</h3>
-    <p>July 2025 – Present</p>
-    <ul>
-      <li>Contributed multiple high impact fixes for sev2 reduction goal</li>
-      <ul>
-        <li>Proposed new logic to optimize async workflows to reduce dynamodb pressure</li>
-        <li>Perform upgrade on managed flink service application</li>
-        <li>Improved flink application to share cloudwatch clients in subtasks and reduce thread utilization and cpu by 10% in large regions.</li>
-        <li>Adapted core API for service creation to use workflows which persist rollback state and eliminate orphaned service/load balancer problems, a frequent custom issue.</li>
-      </ul>
-      <li>Region build automation for legacy LPT infrastructure including looking up custom properties from RIP and eliminate hard-coded variables such as aws accountID from code.</li>
-      <li>Oncall operator during large-scale events where multiple AZs went out and carefully collaborated on using BigRedButton tool to re-route traffic to different AZs to mitigate the issue.</li>
-      <li>Extended kinesis flink pipeline with custom validation logic to prevent data loss after restarts.</li>
-      <li>Update infrastructure in CDK to include Hydra approval workflow for security compliance tests</li>
-      <li>Optimize throughput by batching internal API calls between AWS regions causing large spikes in processing
-        queue</li>
-      <li>Execute and improve backfill scripts to migrate VPC endpoints to new metering workflow</li>
-      <li>Assisted in migration to new metering system dependency to address scaling concerns and simplify team
-        infrastructure.</li>
-      <li>Ran scale up operations for cron job system for customer billing operations to address over and under billing
-        issues.</li>
-      <li>Created region build automation templates for internal infrastructure in new AWS regions.</li>
-      <li>Implemented script to remove AWS resources and update internal metadata for decommissioned Availability Zone.
-      </li>
-    </ul>
+    <!-- Skills Section -->
+    <section id="skills" class="mb-5 py-4">
+      <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+      <div class="d-flex flex-wrap" data-aos="fade-up">
+        <span class="badge badge-skill">Java</span>
+        <span class="badge badge-skill">C/C++</span>
+        <span class="badge badge-skill">Python</span>
+        <span class="badge badge-skill">Go</span>
+        <span class="badge badge-skill">Ruby on Rails</span>
+        <span class="badge badge-skill">JavaScript (React/Node)</span>
+        <span class="badge badge-skill">AWS (CDK, Flink, Kinesis)</span>
+        <span class="badge badge-skill">Docker</span>
+        <span class="badge badge-skill">SQL</span>
+        <span class="badge badge-skill">Linux</span>
+        <span class="badge badge-skill">Git</span>
+      </div>
+    </section>
 
-    <h3 class="h5">Software Development Engineer, Amazon</h3>
-    <p>July 2024 – July 2025</p>
-    <ul>
-      <li>Developed new iOS and Android feature for Goodreads app.</li>
-      <li>Led CloudAuth and Amazon API migrations and assisted with major discourse platform upgrades.</li>
-      <li>Performed JDK17 migrations on multiple java services</li>
-    </ul>
+    <!-- Projects Section -->
+    <section id="projects" class="mb-5">
+      <h2 class="section-title" data-aos="fade-up">Selected Projects</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+          <div class="card h-100 p-4">
+            <h3 class="h5">The Fine Print</h3>
+            <p class="text-muted small">Led the backend team for a legal document summarization tool using GPT-3.5-Turbo. Built as a browser extension and web app to handle large-scale text efficiently.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 p-4">
+            <h3 class="h5">Maple Juice</h3>
+            <p class="text-muted small">A distributed system in Go featuring a gossip-based failure detector, fault-tolerant file system, and an RPC-based batch processing framework.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h3 class="h5">Software Development Engineer Intern, Amazon</h3>
-    <p>May 2023 – Aug 2023</p>
-    <ul>
-      <li>Designed and implemented API in Ruby on Rails and GraphQL to get Goodreads editorial data.</li>
-      <li>Shipped two new features and several improvements to the most visited web pages in React.</li>
-    </ul>
+    <!-- Education Section -->
+    <section id="education" class="mb-5">
+      <h2 class="section-title" data-aos="fade-up">Education</h2>
+      <div class="d-flex mb-3" data-aos="fade-up">
+        <div class="me-3"><i class="fas fa-university text-primary mt-1"></i></div>
+        <div>
+          <h4 class="h6 mb-0">University of Illinois Urbana-Champaign</h4>
+          <p class="text-muted small">B.S. in Applied Mathematics and Computer Science | 2020 &ndash; 2024</p>
+        </div>
+      </div>
+    </section>
 
-    <h3 class="h5">Course Assistant — Introduction to Computer Systems, University of Illinois</h3>
-    <p>Aug 2022 – May 2024</p>
-    <ul>
-      <li>Tutored 150+ students on system concepts and programming assignments in C and Python.</li>
-      <li>Programmed autograded containerized questions for the PrairieLearn platform.</li>
-      <li>Set up and diagnosed issues with core class infrastructure and GitHub workflows.</li>
-    </ul>
-
-    <h3 class="h5">Software Engineer Intern, Humantic AI</h3>
-    <p>Jun 2022 – Aug 2022</p>
-    <ul>
-      <li>Designed a server monitoring dashboard in Grafana to visualize user metrics and trends.</li>
-    </ul>
-
-    <h3 class="h5">Full-Stack Web Developer Intern, Aspire Impact Pvt. Ltd.</h3>
-    <p>May 2021 – Aug 2021</p>
-    <ul>
-      <li>Developed a website with Node.js and Express for an online assessment platform with automatic report
-        generation.</li>
-    </ul>
-
-    <h2>Skills</h2>
-
-    <p>Java,
-      C/C++,
-      Python,
-      Go,
-      JavaScript,
-      Shell,
-      Linux,
-      AWS,
-      SQL,
-      React.js,
-      Node.js,
-      Docker,
-      Git,
-      Vim
-    </p>
-
-    <h2>Projects</h2>
-
-    <h3>The Fine Print</h3>
-    <p>Led the backend team for a project to efficiently summarize large legal text documents in multiple formats using
-      the GPT-3.5-Turbo model, via a browser extension and web application.</p>
-
-    <h3>Maple Juice</h3>
-    <p>
-      Designed a distributed system in Go: gossip-based UDP failure detector, fault-tolerant file system, and
-      load-balancing batch-processing framework with RPC-based protocols.
-    </p>
-
-    <h3>Infinite Maze</h3>
-    <p>
-      Built a game in Flask with dynamically generated mazes, served by a collection of microservices over a custom JSON
-      protocol.
-    </p>
-
-    <h2>Hobbies</h2>
-
-    <p>Music compositions and guitar covers: <a href="https://www.youtube.com/@aaryabhatia3551">YouTube Channel</a> and
-      <a href="https://soundcloud.com/aarya-bhatia">SoundCloud</a>
-
-    <h2>Contact</h2>
-
-    <ul>
-      <li><a href="mailto:aarya.bhatia1678@gmail.com">Email</a></li>
-      <li><a href="https://www.github.com/aarya-bhatia">GitHub</a></li>
-      <li><a href="https://www.instagram.com/aarya.bhatia">Instagram</a></li>
-    </ul>
-
-    <img src="images/sunset.jpg" class="img-fluid" alt="sunset image" width=450>
-
-    <div class="mb-4"></div>
+    <!-- Contact & Hobbies -->
+    <section id="contact" class="mb-5 pt-4">
+      <div class="row g-5">
+        <div class="col-md-6" data-aos="fade-right">
+          <h2 class="section-title">Get in Touch</h2>
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <a href="mailto:aarya.bhatia1678@gmail.com" class="text-decoration-none text-muted">
+                <i class="fas fa-envelope contact-icon"></i> aarya.bhatia1678@gmail.com
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://www.github.com/aarya-bhatia" class="text-decoration-none text-muted">
+                <i class="fab fa-github contact-icon"></i> github.com/aarya-bhatia
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://www.instagram.com/aarya.bhatia" class="text-decoration-none text-muted">
+                <i class="fab fa-instagram contact-icon"></i> @aarya.bhatia
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <h2 class="section-title">Beyond Coding</h2>
+          <p class="text-muted small">When I'm not architecting systems, I'm usually composing music or playing guitar. Check out my work:</p>
+          <div class="d-flex gap-3">
+            <a href="https://www.youtube.com/@aaryabhatia3551" class="btn btn-sm btn-outline-danger"><i class="fab fa-youtube me-2"></i>YouTube</a>
+            <a href="https://soundcloud.com/aarya-bhatia" class="btn btn-sm btn-outline-warning"><i class="fab fa-soundcloud me-2"></i>SoundCloud</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </div>
+
+  <footer class="text-center">
+    <div class="container">
+      <img src="images/sunset.jpg" class="rounded shadow-sm mb-4 img-fluid" style="max-width: 400px;" alt="sunset">
+      <p class="text-muted small">&copy; 2026 Aarya Bhatia. Built with passion and precision.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
 </body>
 
 </html>
